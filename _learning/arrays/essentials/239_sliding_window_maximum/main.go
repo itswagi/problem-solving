@@ -25,25 +25,26 @@ func maxSlidingWindow(nums []int, k int) []int {
 	return output
 }
 
-func maxSlidingWindow(nums []int, k int) []int {
-	res := []int {}
+// Brute Force
+// func maxSlidingWindow(nums []int, k int) []int {
+// 	res := []int {}
 
-    for i := 0; i <= len(nums) - k; i++ {
-        currMax := nums[i]
+//     for i := 0; i <= len(nums) - k; i++ {
+//         currMax := nums[i]
 
-        for j := 0; j < k; j++ {
-            currMax = max(currMax, nums[i+j])
-        }
+//         for j := 0; j < k; j++ {
+//             currMax = max(currMax, nums[i+j])
+//         }
 
-        res = append(res, currMax)
-    }
-    return res
-}
+//         res = append(res, currMax)
+//     }
+//     return res
+// }
 
 
-func max(a, b int) int {
-    if(a < b) {
-        return b
-    }
-    return a
-}
+// func max(a, b int) int {
+//     if(a < b) {
+//         return b
+//     }
+//     return a
+// }
